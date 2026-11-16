@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "token立省100%",
+    "description": "Refuses every model call so a request spends no tokens, answering “恭喜你，又省下了token！” instead. The settings page shows “当前共省 n 次可能的token消耗”, where n increments on every refusal and persists across restarts."
+  }
+}

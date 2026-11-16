@@ -1,0 +1,49 @@
+{
+  "name": "dsh-token-saver-100",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "token立省100% — 拦截每一次模型调用并直接回一句「恭喜你，又省下了token！」，把省下的调用次数记在设置页里。",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frost-wu/dsh-token-saver-100.git"
+  },
+  "homepage": "https://github.com/Frost-wu/dsh-token-saver-100#readme",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "token-saver",
+    "joke"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
